@@ -2,7 +2,7 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 "Plug 'zchee/deoplete-jedi'
-Plug 'SirVer/ultisnips'		"snippets provider
+Plug 'SirVer/ultisnips'		"snippet engine
 "Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "Conquer of Completion, for code completion
 Plug 'vim-airline/vim-airline'	"lightweight statusline
@@ -23,6 +23,10 @@ Plug 'tpope/vim-fugitive'	"vim git wrapper?
 Plug 'sheerun/vim-polyglot'	"language pack
 Plug 'brooth/far.vim', {'do': 'UpdateRemotePlugins'} "find and replace
 
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'	
+Plug 'iamcco/markdown-preview.nvim', {'do': {-> mkdp#util#install()}, 'for': ['markdown', 'vim-plug']}
+
 "theming
 Plug 'joshdick/onedark.vim'
 "Plug 'joshdick/airline-onedark.vim'
@@ -35,8 +39,11 @@ Plug 'kyoz/purify', {'rtp': 'vim'}
 "Plug 'severin-lemaignan/vim-minimap'
 Plug 'jeffkreeftmeijer/vim-numbertoggle' "contextual numbertoggle
 
+
 call plug#end()
 
+
+let g:python_host_prog = '/usr/bin/python'
 "==============
 "Basic Configs
 "==============
@@ -66,6 +73,21 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 "vim-rainbow configs==>
 let g:rainbow_active = 1
+
+"=========
+"Markdown
+"=========
+
+"vim-markdown configs==>
+let g:vim_markdown_conceal = 0
+
+let g:tex_conceal = ""
+
+let g:vim_markdown_math = 1
+
+"markdown-preview configs==>
+let g:mkdp_auto_close = 0
+
 
 "===================
 "Custom Keybindings
