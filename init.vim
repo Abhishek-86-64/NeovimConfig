@@ -30,14 +30,15 @@ Plug 'iamcco/markdown-preview.nvim', {'do': {-> mkdp#util#install()}, 'for': ['m
 "theming
 Plug 'joshdick/onedark.vim'
 "Plug 'joshdick/airline-onedark.vim'
-Plug 'cocopon/iceberg.vim'
+"Plug 'cocopon/iceberg.vim'
 Plug 'marciomazza/vim-brogrammer-theme'
 Plug 'ryanoasis/vim-devicons'	"provides nice icons for stuffs :)
-Plug 'dracula/vim', {'as': 'dracula'}
+"Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'kyoz/purify', {'rtp': 'vim'}
-
+"Plug 'sickill/vim-monokai'
+"Plug 'ayu-theme/ayu-vim'
 "Plug 'severin-lemaignan/vim-minimap'
-Plug 'jeffkreeftmeijer/vim-numbertoggle' "contextual numbertoggle
+Plug 'jeffkreeftmeijer/vim-numbertoggle' "contextual line numbertoggling
 
 
 call plug#end()
@@ -63,8 +64,10 @@ set shiftwidth=4
 "Theming
 "========
 
-syntax on
 set t_Co=256
+set termguicolors
+syntax on
+"let ayucolor = 'mirage'
 colorscheme brogrammer
 
 "airline configs==>
